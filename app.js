@@ -22,8 +22,12 @@ async function getAuthToken() {
 
 getAuthToken();
 
-async function getRandomTrack(year) {
-  const query = encodeURIComponent(`year:${year}`); // modify this query to search for the tracks you want
+async function getRandomTrack(year, genre) {
+  let query = `year:${year}`;
+  if (genre !== "All-genres") {
+    query += ` genre:${genre}`;
+  }
+  query = encodeURIComponent(query);
   const url = `${SEARCH_URL}?q=${query}&type=${TYPE}&limit=50`;
   const response = await fetch(url, {
     method: "GET",
@@ -48,7 +52,8 @@ const audioEl = document.querySelector("#audio");
 
 btn.addEventListener("click", async () => {
   const year = document.querySelector("#year").value;
-  const track = await getRandomTrack(year);
+  const genre = document.querySelector("#genre").value;
+  const track = await getRandomTrack(year, genre);
   const { name, preview_url, external_urls } = track;
   if (preview_url) {
     trackEl.innerHTML = `Track Name: <a href="${external_urls.spotify}" target="_blank">${name}</a>`;
@@ -70,8 +75,7 @@ btn.addEventListener("click", async () => {
   }
 });
 
-
-const select = document.querySelector("#year");
+const selectYear = document.querySelector("#year");
 
 // Loop from 1920 to 2023 and create an option for each year
 for (let i = 1900; i <= 2023; i++) {
@@ -81,6 +85,16 @@ for (let i = 1900; i <= 2023; i++) {
   if (i === 2023) {
     option.selected = true;
   }
-  select.appendChild(option);
+  selectYear.appendChild(option);
 }
 
+
+const selectGenre = document.getElementById("genre");
+
+
+genres.forEach(function(genre) {
+  const option = document.createElement("option");
+  option.value = genre;
+  option.text = genre;
+  selectGenre.add(option);
+});
