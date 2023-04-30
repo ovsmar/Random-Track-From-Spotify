@@ -6,6 +6,10 @@
     height: 100%;
     object-fit: cover;
     z-index: -1;
+    background-image: url("assets/thumb-1920-1093974.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
 }
 
 
@@ -34,10 +38,10 @@
 }
 
 .explanation {
-    margin-top: 290px;
+    margin-top: 310px;
     text-align: center;
-    font-size: 14px;
-    color: #666666;
+    font-size: 12px;
+    color: #ffffff;
     width: 600px;
     max-width: calc(100% - (140px + 0.5rem));
 
@@ -46,3 +50,42 @@
 .boxGenre{
     display: flex;
 }
+
+
+select {
+    border: none;
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 0px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    -moz-appearance: none;
+    cursor: pointer;
+  }
+  
+  select:focus {
+    outline: none;
+  }
+  
+  select option {
+    background-color: #1c1c1c;
+    color: #ffffff;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  select option:hover {
+    background-color: #282828;
+  }
+  
+  select option:checked {
+    background-color: #282828;
+  }
+  
+
+  

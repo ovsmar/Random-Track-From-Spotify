@@ -90,11 +90,10 @@ for (let i = 1900; i <= 2023; i++) {
 
 
 const selectGenre = document.getElementById("genre");
-
-
 genres.forEach(function(genre) {
   const option = document.createElement("option");
   option.value = genre;
   option.text = genre;
   selectGenre.add(option);
 });
+
