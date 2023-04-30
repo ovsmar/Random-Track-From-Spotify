@@ -27,6 +27,7 @@ This project uses fetch() to make API requests. The getAuthToken() function retr
 The track information will be displayed below the button, and the track preview will be played in the audio player. If a preview is not available for the selected track, an error message will be displayed.
 
 ## Technologies Used
+
 * HTML
 * CSS
 * JavaScript
