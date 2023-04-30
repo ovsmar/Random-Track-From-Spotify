@@ -1,41 +1,41 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
 
     <title>Random Music from Spotify</title>
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <div class="container">
-        <div class="boxGenre">
-            <select id="year"></select>
-            <select id="genre"></select>
-        </div>
-        <button class="btn">Get Random 30sec Track From Spotify</button>
-        <p class="track"></p>
-        <audio id="audio"></audio>
-        
-        <div class="explanation">
-            <p>*Sometimes, when you click the 'Get Random 30sec Track From Spotify' button, the selected track may not
-                play. This could be because the track does not have a preview available on Spotify, or because of
-                regional restrictions that prevent the preview from playing in your location. Also, keep in mind that
-                this tool relies on a random selection of tracks from a specific playlist, so it is possible that some
-                of the tracks may not be available in your country or region. We apologize for any inconvenience and
-                suggest that you try clicking the button again to get a different track.*</p>
-        </div>
+      <div class="boxGenre">
+        <select id="year"></select>
+        <select id="genre"></select>
+      </div>
+      <button class="btn">Get Random 30sec Track From Spotify</button>
+      <p class="track"></p>
+      <audio id="audio"></audio>
+
+      <div class="explanation">
+        <p>
+          *Sometimes, when you click the 'Get Random 30sec Track From Spotify'
+          button, the selected track may not play. This could be because the
+          track does not have a preview available on Spotify, or because of
+          regional restrictions that prevent the preview from playing in your
+          location. Also, keep in mind that this tool relies on a random
+          selection of tracks from a specific playlist, so it is possible that
+          some of the tracks may not be available in your country or region. We
+          apologize for any inconvenience and suggest that you try clicking the
+          button again to get a different track.*
+        </p>
+      </div>
     </div>
     <img id="bg-image" />
 
-<script type="text/javascript" src="genres.js"></script>
-<script type="text/javascript" src="app.js"></script>
-    
-</body>
-
+    <script type="text/javascript" src="genres.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </body>
 </html>

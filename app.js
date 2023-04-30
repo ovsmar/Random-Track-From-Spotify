@@ -36,7 +36,9 @@ async function getRandomTrack(year, genre) {
     },
   });
   const data = await response.json();
-  const tracks = data.tracks.items.filter(track => !previousTracks.includes(track.id));
+  const tracks = data.tracks.items.filter(
+    (track) => !previousTracks.includes(track.id)
+  );
   if (tracks.length === 0) {
     previousTracks = [];
     return getRandomTrack();
@@ -88,12 +90,10 @@ for (let i = 1900; i <= 2023; i++) {
   selectYear.appendChild(option);
 }
 
-
 const selectGenre = document.getElementById("genre");
-genres.forEach(function(genre) {
+genres.forEach(function (genre) {
   const option = document.createElement("option");
   option.value = genre;
   option.text = genre;
   selectGenre.add(option);
 });
-
