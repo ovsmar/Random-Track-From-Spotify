@@ -80,3 +80,38 @@ select option:hover {
 select option:checked {
   background-color: #282828;
 }
+
+
+
+/* CSS for screens smaller than 600px */
+@media (max-width: 600px) {
+  #bg-image {
+   
+    margin-bottom: -50px; 
+  }
+  
+  .container {
+    margin-top: 20px; 
+  }
+  
+  .track {
+    font-size: 16px; 
+  }
+  
+  .explanation {
+    margin-top: 150px;
+    font-size: 10px;
+    width: 90%; 
+  }
+  
+  select {
+    font-size: 12px; 
+  }
+  
+  select option {
+    padding: 10px 20px; 
+    font-size: 12px;
+  }
+}
+
+  
