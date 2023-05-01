@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
 
-    <title>Random Music from Spotify</title>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
 
-  <body>
-    <div class="container">
-      <div class="boxGenre">
-        <select id="year"></select>
-        <select id="genre"></select>
-      </div>
-      <button class="btn">Get Random 30sec Track From Spotify</button>
-      <p class="track"></p>
-      <audio id="audio"></audio>
+  <title>Random Music from Spotify</title>
+</head>
 
-      <div class="explanation">
+<body>
+  <div class="container">
+    <div class="boxGenre">
+      <select id="year"></select>
+      <select id="genre"></select>
+    </div>
+    <button class="btn">Get Random 30sec Track From Spotify  &#9654</button>
+    <p class="track"></p>
+    <div class="record-container">
+      <div class="record"></div>
+      <audio id="audio" controls></audio>
+    </div>
+
+    <!-- <div class="explanation">
         <p>
           *Sometimes, when you click the 'Get Random 30sec Track From Spotify'
           button, the selected track may not play. This could be because the
@@ -31,11 +35,12 @@
           apologize for any inconvenience and suggest that you try clicking the
           button again to get a different track.*
         </p>
-      </div>
-    </div>
-    <img id="bg-image" />
+      </div> -->
+  </div>
+  <img id="bg-image" />
 
-    <script type="text/javascript" src="genres.js"></script>
-    <script type="text/javascript" src="app.js"></script>
-  </body>
+  <script type="text/javascript" src="genres.js"></script>
+  <script type="text/javascript" src="app.js"></script>
+</body>
+
 </html>

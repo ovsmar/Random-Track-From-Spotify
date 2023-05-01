@@ -2,7 +2,7 @@
 
 This is a web application that uses the Spotify Web API to fetch and play a random track based on the user's input of a year and genre.
 
-![view](assets/vis.png)
+![view](assets/visio.png)
 
 ## Project Setup
 

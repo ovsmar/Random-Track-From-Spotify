@@ -71,6 +71,10 @@ btn.addEventListener("click", async () => {
 
     const albumCoverUrl = track.album.images[0].url;
     document.getElementById("bg-image").src = albumCoverUrl;
+
+    document.querySelector('.record').innerHTML = name.split('')
+    .map((e,i) => `<span style="--rot:${i*12}deg">${e}</span>`).join('');
+      
   } else {
     trackEl.innerHTML = `Sorry, this track <a href="${external_urls.spotify}" target="_blank">${name}</a> does not have a preview available, please click again!`;
     trackEl.style.backgroundColor = "red";
@@ -96,4 +100,15 @@ genres.forEach(function (genre) {
   option.value = genre;
   option.text = genre;
   selectGenre.add(option);
+});
+
+const record = document.querySelector(".record");
+const audio = document.getElementById("audio");
+
+audio.addEventListener("play", () => {
+  record.classList.add("playing");
+});
+
+audio.addEventListener("pause", () => {
+  record.classList.remove("playing");
 });
